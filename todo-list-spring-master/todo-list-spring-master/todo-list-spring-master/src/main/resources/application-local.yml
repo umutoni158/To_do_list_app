@@ -1,0 +1,11 @@
+#spring:
+#  datasource:
+#    url: 'jdbc:postgresql://localhost:5432/upVolu'
+#  h2.console:
+#    enabled: true
+#    path: '/h2-console'
+#management:
+#  endpoints:
+#    web:
+#      exposure:
+#        include: '*'

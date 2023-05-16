@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+  <head>
+    <meta charset="utf-8" />
+
+    <title>Your Todo List</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <meta
+      name="description"
+      content="End of Webtech class project"
+    />
+    <meta name="author" content="Umutoni Liliane" />
+
+    <link
+      rel="shortcut icon"
+      type="img/favicon.ico"
+      th:href="@{https://invexdesign.com/blog/wp-content/themes/invex/images/invex-v-white.png}"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="../static/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"
+    />
+
+    <!-- Custom CSS -->
+    <link
+      href="../static/css/footer.css"
+      rel="stylesheet"
+      th:href="@{/css/footer.css}"
+    />
+    <link
+      href="../static/css/header.css"
+      rel="stylesheet"
+      th:href="@{/css/header.css}"
+    />
+    <link
+      href="../static/css/index.css"
+      rel="stylesheet"
+      th:href="@{/css/index.css}"
+    />
+    <link
+      href="../static/css/todo.css"
+      rel="stylesheet"
+      th:href="@{/css/todo.css}"
+    />
+
+    <!-- Bootstrap core CSS -->
+    <link
+      href="../static/vendor/bootstrap/css/bootstrap.min.css"
+      rel="stylesheet"
+      th:href="@{/vendor/bootstrap/css/bootstrap.min.css}"
+    />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body>
+    <header th:replace="fragments/header.html :: top"></header>
+
+    <main class="container" style="flex: 1">
+      <div class="row justify-content-center">
+        <div class="text-center card-size">
+          <h4>Schedule your doings</h4>
+          <div class="card my-4 card-custom">
+            <h5 class="card-header header-custom">Create a new Todo</h5>
+            <div class="card-body">
+              <form method="post" th:action="@{/todo}" th:object="${todo}">
+                <input
+                  th:value="${todo.id}"
+                  th:name="id"
+                  name="id"
+                  type="hidden"
+                />
+                <div class="form-group">
+                  <div class="form-row mb-3">
+                    <label for="wizard-birthday">Choose a day?</label>
+                  </div>
+                  <div class="col">
+                    <input
+                      id="wizard-birthday"
+                      name="todoDate"
+                      placeholder="1980-07-31"
+                      required
+                      th:field="*{todoDate}"
+                      type="date"
+                    />
+                    <div class="col-2 mt-2"></div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <div class="form-row mb-3">
+                    <label for="content">Description ?</label>
+                  </div>
+                  <div class="col">
+                    <input
+                      class="form-control"
+                      th:value="${todo.content}"
+                      th:name="content"
+                      th:id="content"
+                      id="content"
+                      name="content"
+                      placeholder="What do you want to Do <3"
+                      type="text"
+                    />
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="btn button-custom float-right mt-3"
+                  id="buttonSubmit"
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer th:replace="fragments/footer.html :: bottom"></footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script
+      src="../static/vendor/jquery/jquery.min.js"
+      th:src="@{/vendor/jquery/jquery.min.js}"
+    ></script>
+    <script
+      src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"
+      th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js }"
+    ></script>
+  </body>
+</html>

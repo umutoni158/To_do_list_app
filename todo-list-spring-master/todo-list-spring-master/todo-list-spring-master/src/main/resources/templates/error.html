@@ -1,0 +1,54 @@
+<!doctype html>
+
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <meta charset="utf-8">
+
+    <title>Your Todo List</title>
+    <meta name="description"
+        content="">
+    <meta name="author" content="Umutoni Liliane">
+
+    <link rel="shortcut icon" type="img/favicon.ico"
+        th:href="@{https://invexdesign.com/blog/wp-content/themes/invex/images/invex-v-white.png}" />
+
+    <!-- Custom CSS -->
+    <link href="../static/css/footer.css" rel="stylesheet" th:href="@{/css/footer.css}">
+    <link href="../static/css/header.css" rel="stylesheet" th:href="@{/css/header.css}">
+    <link href="../static/css/index.css" rel="stylesheet" th:href="@{/css/index.css}">
+    <link href="../static/css/todo.css" rel="stylesheet" th:href="@{/css/todo.css}">
+
+    <!-- Bootstrap core CSS -->
+    <link href="../static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet"
+        th:href="@{/vendor/bootstrap/css/bootstrap.min.css}">
+
+    <!-- Google Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@200&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+    <header th:replace="fragments/header.html :: top">
+    </header>
+
+    <main class="container">
+        <div class="justify-content-center">
+            <h3 class="mb-4">Error 400: bad request</h3>
+            <h3>Please enter content in your todo</h3>
+        </div>
+    </main>
+
+    <footer th:replace="fragments/footer.html :: bottom">
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="../static/vendor/jquery/jquery.min.js" th:src="@{/vendor/jquery/jquery.min.js}"></script>
+    <script src="../static/vendor/bootstrap/js/bootstrap.bundle.min.js"
+        th:src="@{/vendor/bootstrap/js/bootstrap.bundle.min.js }"></script>
+    <!-- Fontawsome -->
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+header p {
+  color: #bcb6ff !important;
+}
+
+.breadcrumb-custom {
+  background-color: #143642 !important;
+  color: #bcb6ff;
+}
+
+.breadcrumb-custom a {
+  background-color: #143642;
+  color: #bcb6ff;
+}
+
+.breadcrumb-custom a:hover {
+  color: #d9fff5;
+}
+
+@media (min-width: 699px) {
+  header p {
+    font-size: 1.6rem;
+  }
+
+  .breadcrumb-custom {
+    font-size: 1.6rem;
+  }
+}
